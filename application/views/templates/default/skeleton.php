@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
 
 	<title>Koen de Bont | Basic-UI</title>
-	<link href="public/resources/default/css/style.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('public/resources/default/css/style.css'); ?>" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	

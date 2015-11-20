@@ -16,13 +16,30 @@
                 echo 'Template does not exists';exit;
             }
             
-            if(!file_exists(APPPATH.'views/templates/'.$tpl[0].'/pages/'.$view.'.php')){
+            if($view !== null && !file_exists(APPPATH.'views/templates/'.$tpl[0].'/pages/'.$view.'.php')){
                 echo 'View does not exist';exit;
             }
+            
             $data['data']=$data;
             $data['view']=$view;
             $data['template']=$tpl[0];
             
             $this->ci->load->view((isset($tpl[1])) ? 'templates/'.$tpl[0].'/'.$tpl[1] : 'templates/'.$tpl[0].'/skeleton', $data);
+        }
+        
+        function retrieve_templates()
+        {
+            $templates=array();
+            if($dirs = scandir('application/views/templates'))
+            {
+                foreach($dirs as $temp)
+                {
+                    if($temp !== '.' && $temp !== '..' && $temp !== 'manager')
+                    {
+                        $templates[]=$temp;
+                    }
+                }
+            }
+            return $templates;
         }
     }

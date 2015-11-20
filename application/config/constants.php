@@ -83,3 +83,18 @@ define('EXIT_USER_INPUT', 7); // invalid user input
 define('EXIT_DATABASE', 8); // database error
 define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// custom pms constants
+define('USER_EDITOR', 1);
+define('USER_EXECUTIVE', 2);
+define('USER_ADMIN', 3);
+define('USER_ROOT', 4);
+
+// header text and logo positions
+define('HEADER_POS_LEFT', 1);
+define('HEADER_POS_CENTER', 2);
+define("HEADER_POS_RIGHT", 3);
+
+// commonly used URLS
+define('MANAGER_LOGIN_URL', 'admin/manage/login');
+define('ROOT_LOGIN_URL', 'admin/root/login');
